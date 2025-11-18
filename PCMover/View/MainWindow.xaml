@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PCMover"
         mc:Ignorable="d"
-        Title="PCMover" Height="450" Width="800">
+        Title="PCMover" Height="800" Width="1500">
     <Grid>
         
     </Grid>
