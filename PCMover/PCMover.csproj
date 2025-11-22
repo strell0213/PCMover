@@ -69,6 +69,7 @@
     <Compile Include="Models\IEData.cs" />
     <Compile Include="Services\IEService.cs" />
     <Compile Include="Services\SystemSettings.cs" />
+    <Compile Include="Services\uiService.cs" />
     <Compile Include="View\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>

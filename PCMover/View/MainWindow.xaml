@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PCMover"
         mc:Ignorable="d"
-        Title="PCMover" Height="1000" Width="1500" Background="#FF121212" WindowStartupLocation="CenterScreen">
+        Title="PCMover" Height="1000" Width="1500" Background="#FF121212" WindowStartupLocation="CenterScreen" WindowState="Maximized">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"></RowDefinition>
