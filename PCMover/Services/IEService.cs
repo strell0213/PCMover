@@ -21,15 +21,14 @@ namespace PCMover.Services
 
         public void ImportData()
         {
-            _IEDatas.Clear();
-
-            _IEDatas.Concat(_systemSettings.ImportSystemSettings()); //Системные настройки
 
         }
 
         public void ExportData()
         {
+            _IEDatas.Clear();
 
+            _IEDatas.Concat(_systemSettings.ExportSystemSettings()); //Системные настройки
         }
 
     }

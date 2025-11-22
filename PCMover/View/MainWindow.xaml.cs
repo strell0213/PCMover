@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PCMover.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,17 @@ namespace PCMover
     /// </summary>
     public partial class MainWindow : Window
     {
+        public readonly IEService _IEService;
         public MainWindow()
         {
             InitializeComponent();
+
+            _IEService = new IEService();
+        }
+
+        private void BExportFile_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            _IEService.ExportData();
         }
     }
 }
