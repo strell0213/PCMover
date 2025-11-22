@@ -17,14 +17,11 @@ namespace PCMover.Models
 
         }
 
-        public void ImportData()
+        public IEData(string title, string data, string type)
         {
-
-        }
-
-        public void ExportDate()
-        {
-
+            Title = title;
+            Data = data;
+            Type = type;
         }
     }
 }
