@@ -66,6 +66,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="settingsToExport\Decstop settings.cs" />
+    <Compile Include="SimpleLogs\simpleLogger.cs" />
     <Compile Include="Models\IEData.cs" />
     <Compile Include="Services\IEService.cs" />
     <Compile Include="Services\SystemSettings.cs" />
