@@ -66,6 +66,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Models\simpleLogger.cs" />
     <Compile Include="Models\IEData.cs" />
     <Compile Include="Services\IEService.cs" />
     <Compile Include="Services\SystemSettings.cs" />

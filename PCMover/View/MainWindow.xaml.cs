@@ -1,7 +1,9 @@
 ﻿using PCMover.Services;
+using PCMover.SimpleLogs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -31,7 +33,15 @@ namespace PCMover
 
         private void BExportFile_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            _IEService.ExportData();
+            try
+            {
+                _IEService.ExportData();
+            }
+            catch (Exception ex)
+            {
+                Logger log = new Logger("ExportErrorButton", ex.Message, (logLevel)3);
+                log.Write();
+            }
         }
     }
 }

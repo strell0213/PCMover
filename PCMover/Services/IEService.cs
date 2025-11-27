@@ -12,11 +12,13 @@ namespace PCMover.Services
         private List<IEData> _IEDatas;
 
         private readonly SystemSettings _systemSettings;
+        private readonly uiService _uiService;
         public IEService() 
         {
             _IEDatas = new List<IEData>();
 
             _systemSettings = new SystemSettings();
+            _uiService = new uiService();
         }
 
         public void ImportData()
@@ -29,6 +31,7 @@ namespace PCMover.Services
             _IEDatas.Clear();
 
             _IEDatas.Concat(_systemSettings.ExportSystemSettings()); //Системные настройки
+            _IEDatas.Concat(_uiService.ExportUI());
         }
 
     }

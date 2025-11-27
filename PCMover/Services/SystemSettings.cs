@@ -1,5 +1,6 @@
 ﻿using Microsoft.Win32;
 using PCMover.Models;
+using PCMover.SimpleLogs;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics.Contracts;
@@ -53,9 +54,17 @@ namespace PCMover.Services
             data = new IEData("TailoredExperiencesWithDiagnosticDataEnabled", tailored.ToString(), NAME_TYPE_DATA);
             systemDatas.Add(data);
 
-            int trackApps = (int)(Registry.GetValue(@"HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced","Start_TrackProgs",0) ?? 0);
-            data = new IEData("Start_TrackProgs", trackApps.ToString(), NAME_TYPE_DATA);
-            systemDatas.Add(data);
+            try
+            {
+                int trackApps = (int)(Registry.GetValue(@"HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced", "Start_TrackProgs", 0) ?? 0);
+                data = new IEData("Start_TrackProgs", trackApps.ToString(), NAME_TYPE_DATA);
+                systemDatas.Add(data);
+            }
+            catch(Exception ex)
+            {
+                Logger log = new Logger("dsa", "dwa", (logLevel)3);
+                log.Write();
+            }
         }
     }
 }
