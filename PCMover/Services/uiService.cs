@@ -11,12 +11,15 @@ using System.Threading.Tasks;
 
 namespace PCMover.Services
 {
-    public class uiService
+    public class UIService
     {
-        public uiService() { }
+        const string NAME_TYPE_DATA = "UISettings";
+        public UIService() {}
         public List<IEData> ExportUI()
         {
-            return null;
+            List<IEData> UISettings = new List<IEData>();
+            //-------Тут методы пишешь
+            return UISettings;
         }
 
     }
