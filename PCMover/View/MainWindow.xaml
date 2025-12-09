@@ -40,12 +40,13 @@
                 <ColumnDefinition Width="15*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
-            <Grid x:Name="GExportTab" Grid.Column="0">
-                <Label Content="Export Settings" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="16"></Label>
-                <Line Fill="White" VerticalAlignment="Bottom" Margin="15,0,15,5" StrokeThickness="2" Height="10" X2="{Binding ActualWidth, ElementName=GExportTab, Mode=OneWay}" Y1="9" Stroke="White" Y2="9"/>
+            <Grid x:Name="GExportTab" Grid.Column="0" MouseDown="GExportTab_MouseDown">
+                <Label x:Name="LExportTab" Content="Export Settings" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="16"></Label>
+                <Line x:Name="LineExportTab" Fill="White" VerticalAlignment="Bottom" Margin="15,0,15,5" StrokeThickness="2" Height="10" X2="{Binding ActualWidth, ElementName=GExportTab, Mode=OneWay}" Y1="9" Stroke="White" Y2="9"/>
             </Grid>
-            <Grid x:Name="GImportTab" Grid.Column="1">
-                <Label Content="Import Settings" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FF909090" FontSize="16"></Label>
+            <Grid x:Name="GImportTab" Grid.Column="1" MouseDown="GImportTab_MouseDown">
+                <Label x:Name="LImportTab" Content="Import Settings" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="DarkGray" FontSize="16"></Label>
+                <Line x:Name="LineImportTab" Fill="DarkGray" VerticalAlignment="Bottom" Margin="15,0,15,5" StrokeThickness="2" Height="10" X2="0" Y1="9" Stroke="White" Y2="9"/>
             </Grid>
         </Grid>
         
@@ -53,7 +54,7 @@
         
         
         
-        <Grid Grid.Row="2">
+        <Grid x:Name="GExport" Grid.Row="2">
             <Grid Margin="300,30,300,30">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="0.4*"></RowDefinition>
@@ -220,6 +221,11 @@
                     </Border>
                 </Grid>
             </Grid>
+        </Grid>
+
+
+        <Grid x:Name="GImport" Grid.Row="2" Visibility="Hidden">
+            
         </Grid>
         
         
