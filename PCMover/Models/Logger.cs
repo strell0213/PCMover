@@ -31,8 +31,9 @@ namespace PCMover.SimpleLogs
                 Text = ValidateMessage(Text);
 
                 string pathToLogFolder = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Log");
-                //TODO Проверка на папку
-                //Проверка на папку\создание
+
+                Directory.CreateDirectory(pathToLogFolder);
+
                 string filename = System.IO.Path.Combine(pathToLogFolder, $"PCMover_{DateTime.Now:yyyy-MM-dd}.log");
 
                 string fullText = $"[{DateTime.Now:yyyy-MM-dd HH:mm:ss.fff}] [{Titul}] [{Level}]: {Text}\r\n";

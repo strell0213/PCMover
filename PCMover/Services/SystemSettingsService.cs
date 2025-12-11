@@ -19,8 +19,8 @@ namespace PCMover.Services
         {
             List<IEData> systemDatas = new List<IEData>();
 
-            GetRegionSettings(systemDatas); //Настройки региона, языка, часовой пояс
-            GetPrivacySettings(systemDatas); //Настройки конфидециальности
+            GetRegionSettings(systemDatas);
+            GetPrivacySettings(systemDatas); 
 
             return systemDatas;
         }

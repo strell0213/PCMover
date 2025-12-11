@@ -11,7 +11,5 @@ namespace PCMover.Models
     {
         public static Brush ColorInactiveTab = Brushes.DarkGray; //темно серый
         public static Brush ColorActiveTab = Brushes.White;  //белый
-
-
     }
 }

@@ -96,8 +96,8 @@
                                         <RowDefinition></RowDefinition>
                                         <RowDefinition></RowDefinition>
                                     </Grid.RowDefinitions>
-                                    <Label Grid.Row="0" VerticalAlignment="Bottom" HorizontalAlignment="Left" Content="Desktop Settings" Background="{x:Null}" Foreground="White" FontSize="22"/>
-                                    <Label Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Left" Content="Wallpaper, icons, theme preferences" Background="{x:Null}" Foreground="#FFA4A39E" FontSize="14"/>
+                                    <Label Grid.Row="0" VerticalAlignment="Bottom" HorizontalAlignment="Left" Content="System Settings" Background="{x:Null}" Foreground="White" FontSize="22"/>
+                                    <Label Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Left" Content="Region settings, laguage, date and time" Background="{x:Null}" Foreground="#FFA4A39E" FontSize="14"/>
                                 </Grid>
                             </Grid>
                         </Border>
@@ -123,7 +123,7 @@
                                         <RowDefinition></RowDefinition>
                                     </Grid.RowDefinitions>
                                     <Label Grid.Row="0" VerticalAlignment="Bottom" HorizontalAlignment="Left" Content="Browser Data" Background="{x:Null}" Foreground="White" FontSize="22"/>
-                                    <Label Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Left" Content="Bookmarks, saved passwords" Background="{x:Null}" Foreground="#FFA4A39E" FontSize="14"/>
+                                    <Label Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Left" Content="buy content" Background="{x:Null}" Foreground="#FFA4A39E" FontSize="14"/>
                                 </Grid>
                             </Grid>
                         </Border>
@@ -149,7 +149,7 @@
                                         <RowDefinition></RowDefinition>
                                     </Grid.RowDefinitions>
                                     <Label Grid.Row="0" VerticalAlignment="Bottom" HorizontalAlignment="Left" Content="Network Settings" Background="{x:Null}" Foreground="White" FontSize="22"/>
-                                    <Label Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Left" Content="WiFi networks, VPN configurations" Background="{x:Null}" Foreground="#FFA4A39E" FontSize="14"/>
+                                    <Label Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Left" Content="buy content" Background="{x:Null}" Foreground="#FFA4A39E" FontSize="14"/>
                                 </Grid>
                             </Grid>
                         </Border>
@@ -175,7 +175,7 @@
                                         <RowDefinition></RowDefinition>
                                     </Grid.RowDefinitions>
                                     <Label Grid.Row="0" VerticalAlignment="Bottom" HorizontalAlignment="Left" Content="System Preferences" Background="{x:Null}" Foreground="White" FontSize="22"/>
-                                    <Label Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Left" Content="Display settings, power options, regional settings" Background="{x:Null}" Foreground="#FFA4A39E" FontSize="14"/>
+                                    <Label Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Left" Content="Personalization, notification, start bar settings" Background="{x:Null}" Foreground="#FFA4A39E" FontSize="14"/>
                                 </Grid>
                             </Grid>
                         </Border>
@@ -200,7 +200,7 @@
                                         <RowDefinition></RowDefinition>
                                     </Grid.RowDefinitions>
                                     <Label Grid.Row="0" VerticalAlignment="Bottom" HorizontalAlignment="Left" Content="File Associations" Background="{x:Null}" Foreground="White" FontSize="22"/>
-                                    <Label Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Left" Content="Default programs for file types" Background="{x:Null}" Foreground="#FFA4A39E" FontSize="14"/>
+                                    <Label Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Left" Content="buy content" Background="{x:Null}" Foreground="#FFA4A39E" FontSize="14"/>
                                 </Grid>
                             </Grid>
                         </Border>
