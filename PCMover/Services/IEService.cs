@@ -32,11 +32,19 @@ namespace PCMover.Services
 
             _IEDatas.Concat(_systemSettings.ExportSystemSettings()); //Системные настройки
             _IEDatas.Concat(_uiService.ExportUI()); //Настройки UI
+
+
         }
 
         public void SaveDataListInFile()
         {
+            //Пользователь выбирает путь для сохранения настроек
 
+            foreach (var data in _IEDatas)
+            {
+                //data - одна настройка
+                //Сохранение настройки в файл ПОСТРОЧНО
+            }
         }
 
         public void LoadDataListFrom()

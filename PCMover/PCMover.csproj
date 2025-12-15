@@ -66,6 +66,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="DisplaySettingsService.cs" />
     <Compile Include="Models\AnimationClass.cs" />
     <Compile Include="Models\ColorFields.cs" />
     <Compile Include="Models\Logger.cs" />

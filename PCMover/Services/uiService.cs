@@ -21,6 +21,7 @@ namespace PCMover.Services
         {
             List<IEData> personalizationDatas = new List<IEData>();
             GetPrivacyPersonalizationSettings(personalizationDatas);
+            GetPersonalize(personalizationDatas);
             GetAdPersonalizationStart(personalizationDatas);
             GetNotificationStart(personalizationDatas);
 
@@ -36,9 +37,10 @@ namespace PCMover.Services
                 personalization = new IEData("SlideshowSourceDirectoriesSet", adWallpapers.ToString(), NAME_TYPE_DATA);
                 personalizationDatas.Add(personalization);
 
-                int adColor = (int)(Registry.GetValue(@"HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize", "Enabled", 0) ?? 0);
-                personalization = new IEData("BackgroundHistoryPath0", adColor.ToString(), NAME_TYPE_DATA);
-                personalizationDatas.Add(personalization);
+                //int adColor = (int)(Registry.GetValue(@"HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize", "Enabled", 0) ?? 0);
+                //personalization = new IEData("BackgroundHistoryPath0", adColor.ToString(), NAME_TYPE_DATA);
+                //personalizationDatas.Add(personalization);
+                //---------------------------GetPersonalize(List<IEData> personalizationDatas)----------------------------
 
                 int adTheme = (int)(Registry.GetValue(@"HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Themes", "Enabled", 0) ?? 0);
                 personalization = new IEData("WallpaperSetFromTheme", adTheme.ToString(), NAME_TYPE_DATA);
@@ -46,15 +48,44 @@ namespace PCMover.Services
 
                 int adTask = (int)(Registry.GetValue(@"HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Taskband", "Enabled", 0) ?? 0);
                 personalization = new IEData("FavoritesVersion", adTask.ToString(), NAME_TYPE_DATA);
-                personalizationDatas.Add(personalization);           
+                personalizationDatas.Add(personalization);
             }
             catch (Exception ex)
             {
                 Logger log = new Logger("Error Privacy Settings", ex.Message, (logLevel)3);
                 log.Write();
             }
+        }
 
-}
+        public void GetPersonalize(List<IEData> personalizationDatas)
+        {
+            IEData personalization = null;
+
+            try
+            {
+                int appsUseLightTheme = (int)(Registry.GetValue(@"HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize", "AppsUseLightTheme", 0) ?? 0);
+                personalization = new IEData("AppsUseLightTheme", appsUseLightTheme.ToString(), NAME_TYPE_DATA);
+                personalizationDatas.Add(personalization);
+
+                int colorPrevalence = (int)(Registry.GetValue(@"HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize", "ColorPrevalence", 0) ?? 0);
+                personalization = new IEData("ColorPrevalence", colorPrevalence.ToString(), NAME_TYPE_DATA);
+                personalizationDatas.Add(personalization);
+
+                int enableTransparency = (int)(Registry.GetValue(@"HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize", "EnableTransparency", 0) ?? 0);
+                personalization = new IEData("EnableTransparency", enableTransparency.ToString(), NAME_TYPE_DATA);
+                personalizationDatas.Add(personalization);
+
+                int systemUsesLightTheme = (int)(Registry.GetValue(@"HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize", "SystemUsesLightTheme", 0) ?? 0);
+                personalization = new IEData("SystemUsesLightTheme", systemUsesLightTheme.ToString(), NAME_TYPE_DATA);
+                personalizationDatas.Add(personalization);
+            }
+            catch (Exception ex)
+            {
+                Logger log = new Logger("Error Privacy Settings", ex.Message, (logLevel)3);
+                log.Write();
+            }
+        }
+
         public void GetNotificationStart(List<IEData> personalizationDatas)
         {
             IEData personalization = null;
