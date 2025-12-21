@@ -54,7 +54,7 @@
         
         
         
-        <Grid x:Name="GExport" Grid.Row="2">
+        <Grid x:Name="GExport" Grid.Row="2" Visibility="Visible">
             <Grid Margin="300,30,300,30">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="0.4*"></RowDefinition>
@@ -122,8 +122,8 @@
                                         <RowDefinition></RowDefinition>
                                         <RowDefinition></RowDefinition>
                                     </Grid.RowDefinitions>
-                                    <Label Grid.Row="0" VerticalAlignment="Bottom" HorizontalAlignment="Left" Content="Browser Data" Background="{x:Null}" Foreground="White" FontSize="22"/>
-                                    <Label Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Left" Content="buy content" Background="{x:Null}" Foreground="#FFA4A39E" FontSize="14"/>
+                                    <Label Grid.Row="0" VerticalAlignment="Bottom" HorizontalAlignment="Left" Content="UI Settings" Background="{x:Null}" Foreground="White" FontSize="22"/>
+                                    <Label Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Left" Content="Taskbar settings, Theme (colors, fonts, dark/light), Interface scale." Background="{x:Null}" Foreground="#FFA4A39E" FontSize="14"/>
                                 </Grid>
                             </Grid>
                         </Border>
@@ -148,15 +148,15 @@
                                         <RowDefinition></RowDefinition>
                                         <RowDefinition></RowDefinition>
                                     </Grid.RowDefinitions>
-                                    <Label Grid.Row="0" VerticalAlignment="Bottom" HorizontalAlignment="Left" Content="Network Settings" Background="{x:Null}" Foreground="White" FontSize="22"/>
-                                    <Label Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Left" Content="buy content" Background="{x:Null}" Foreground="#FFA4A39E" FontSize="14"/>
+                                    <Label Grid.Row="0" VerticalAlignment="Bottom" HorizontalAlignment="Left" Content="Display Settings" Background="{x:Null}" Foreground="White" FontSize="22"/>
+                                    <Label Grid.Row="1" VerticalAlignment="Top" HorizontalAlignment="Left" Content="Resolution, Refresh Rate, Multi-monitor Settings" Background="{x:Null}" Foreground="#FFA4A39E" FontSize="14"/>
                                 </Grid>
                             </Grid>
                         </Border>
                     </Grid>
 
 
-                    <Grid Grid.Row="3">
+                    <!--<Grid Grid.Row="3">
                         <Border Background="#FF17212B" Margin="10,10,10,10">
                             <Border.Resources>
                                 <Style TargetType="Border">
@@ -168,7 +168,7 @@
                                     <ColumnDefinition Width="0.1*"></ColumnDefinition>
                                     <ColumnDefinition></ColumnDefinition>
                                 </Grid.ColumnDefinitions>
-                                <CheckBox VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14"/>
+                                <CheckBox VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="14" IsChecked="False"/>
                                 <Grid Grid.Column="1">
                                     <Grid.RowDefinitions>
                                         <RowDefinition></RowDefinition>
@@ -204,7 +204,7 @@
                                 </Grid>
                             </Grid>
                         </Border>
-                    </Grid>
+                    </Grid>-->
 
 
                 </Grid>
@@ -225,7 +225,52 @@
 
 
         <Grid x:Name="GImport" Grid.Row="2" Visibility="Hidden">
-            
+            <Grid Margin="200,30,200,30">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"></RowDefinition>
+                        <RowDefinition Height="30"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Label Content="Import Settings File" FontSize="24" Foreground="White" HorizontalAlignment="Left" VerticalAlignment="Center"></Label>
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <Label Content="Upload your PCMover settings file to restore your configuration" Foreground="#FFA4A4A4" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="16"></Label>
+                    </Grid>
+                    <Grid Grid.Row="2">
+                        <Border x:Name="BImportFile" Background="#FF101828" Margin="10,10,10,10" >
+                            <Border.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="15"/>
+                                </Style>
+                            </Border.Resources>
+                            <Grid Margin="80,80,80,80">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                    <RowDefinition Height="40"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Image Source="/Resources/icons8-загрузить-96.png" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,5,0,5">
+                                    
+                                </Image>
+                                <Label Grid.Row="1" Content="Click to upload or drag and drop" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Foreground="White"/>
+                                <Label Grid.Row="2" Content=".pcm files only" Foreground="#FFA4A4A4" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16"></Label>
+                            </Grid>
+                        </Border>
+                    </Grid>
+                    
+                </Grid>
+
+                <Grid Grid.Column="1">
+                    
+                </Grid>
+            </Grid>
         </Grid>
         
         
