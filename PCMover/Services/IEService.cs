@@ -35,6 +35,7 @@ namespace PCMover.Services
             _IEDatas.AddRange(_systemSettings.ExportSystemSettings()); //Системные настройки
             _IEDatas.AddRange(_uiService.ExportUI()); //Настройки UI
             _IEDatas.AddRange(_displaySettingsService.ExportDisplaySettings()); //Настройки дисплея
+            //сащшывоагрывштваты
         }
 
         public void SaveDataListInFile()
